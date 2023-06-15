@@ -45,10 +45,10 @@ export default {
     {
       name:"rating",
       title:"Resturant rating",
-      type:"Enter a rating from 1 to 5",
+      type:"number",
       validation:(Rule) => Rule.required() 
-      .max() 
-      .min() 
+      .max(5) 
+      .min(1) 
       .error("please enter a value between 1 and 5")
     },
 
