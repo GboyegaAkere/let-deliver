@@ -3,9 +3,27 @@ import React from 'react'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import Categories from '../components/Categories'
 import FeaturedRow from '../components/FeaturedRow'
+// import {sanityClient}from '../sanity'
 
 
 const HomeScreen = () => {
+    const [featureCategories, setFeatureCategories] = React.useState([])
+
+    // React.useEffect(()=>{
+    //     sanityClient.fetch(`
+    //     *[_type =="featured"]{
+    //         ...,
+    //         resturants[]->{
+    //           ...,
+    //           dishes[]->
+    //         }
+    //       }
+        
+    //     `).then(data =>{
+    //         setFeatureCategories(data)
+    //     })
+    // },[])
+
   return (
     <SafeAreaView >
       <View className="bg-white">
